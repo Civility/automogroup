@@ -1,0 +1,8 @@
+enabled: '1'
+url: ''
+target: _self
+image: 'gantry-media://logo.svg'
+link: '1'
+svg: ''
+text: Auto
+class: ''

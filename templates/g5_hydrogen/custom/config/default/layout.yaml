@@ -1,0 +1,123 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/home.png'
+  name: automotogroup
+  timestamp: 1523533480
+layout:
+  /header/:
+    -
+      - 'logo-3130 15'
+      - 'menu-8909 70'
+      - 'position-lang 15'
+  /showcase/:
+    -
+      - position-show
+  /feature/:
+    -
+      - position-feature
+    -
+      - position-local
+  /main/:
+    -
+      - position-search
+    -
+      - system-content-2477
+    -
+      - 'position-akk 33'
+      - 'position-oil 34'
+      - 'position-aks 33'
+  /footer/:
+    -
+      - 'copyright-3354 50'
+      - 'branding-6620 50'
+  offcanvas:
+    -
+      - 'logo-2736 20'
+      - 'mobile-menu-7352 70'
+      - 'position-position-3222 10'
+structure:
+  header:
+    attributes:
+      boxed: ''
+  showcase:
+    type: section
+    attributes:
+      boxed: '2'
+      class: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  main:
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  offcanvas:
+    attributes:
+      position: g-offcanvas-right
+      class: ''
+      extra: {  }
+      swipe: '1'
+      css3animation: '1'
+content:
+  logo-3130:
+    block:
+      class: logo
+      variations: center
+  menu-8909:
+    block:
+      class: menu
+      variations: center
+  position-lang:
+    attributes:
+      key: lang
+    block:
+      class: lang
+      variations: center
+  position-show:
+    attributes:
+      key: show
+  position-feature:
+    attributes:
+      key: feature
+    block:
+      id: search
+      variations: 'center nomarginall nopaddingall'
+  position-local:
+    attributes:
+      key: local
+  position-search:
+    attributes:
+      key: search
+  position-akk:
+    attributes:
+      key: akk
+    block:
+      class: akk
+      variations: nopaddingall
+  position-oil:
+    attributes:
+      key: oil
+    block:
+      class: oil
+      variations: nopaddingall
+  position-aks:
+    attributes:
+      key: aks
+    block:
+      class: aks
+      variations: nopaddingall
+  copyright-3354:
+    block:
+      variations: align-right
+  branding-6620:
+    block:
+      variations: align-left
+  logo-2736:
+    title: 'Logo / Image'
+  position-position-3222:
+    title: 'Module Position'
+    attributes:
+      key: local

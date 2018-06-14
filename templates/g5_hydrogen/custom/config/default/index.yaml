@@ -1,0 +1,48 @@
+name: default
+timestamp: 1527861990
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/home.png'
+  name: automotogroup
+  timestamp: 1523533480
+positions:
+  lang: Lang
+  show: Show
+  feature: Feature
+  local: 'Module Position'
+  search: Search
+  akk: Akk
+  oil: Oil
+  aks: Aks
+sections:
+  header: Header
+  showcase: Showcase
+  feature: Feature
+  main: Main
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  logo:
+    logo-3130: Logo
+    logo-2736: 'Logo / Image'
+  menu:
+    menu-8909: Menu
+  position:
+    position-lang: Lang
+    position-show: Show
+    position-feature: Feature
+    position-local: Local
+    position-search: Search
+    position-akk: Akk
+    position-oil: Oil
+    position-aks: Aks
+    position-position-3222: 'Module Position'
+  content:
+    system-content-2477: 'Page Content'
+  copyright:
+    copyright-3354: Copyright
+  branding:
+    branding-6620: Branding
+  mobile-menu:
+    mobile-menu-7352: Mobile-menu
+inherit: {  }

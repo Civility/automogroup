@@ -1,0 +1,99 @@
+.com_gantry5{
+//слайдер на всю страницу
+	#g-showcase{
+		@for $i from 0 through 200 {
+			@each $id in #{$i}{
+				.show_#{$id}, .show_0 {
+					height: 100vh;
+				}
+			}
+		}
+	}
+	//find боковые кнопки
+	#g-feature{
+		position: inherit;
+		#search{
+			border-top: 15vh solid $transparent;
+			margin-top: -15vh;
+			@include breakpoint(mobile-only){border-top: none;}
+		}
+		.g-title{
+			visibility: hidden;
+			@include breakpoint(desktop-only){visibility: visible;}
+			@include breakpoint(desktop-range){visibility: hidden;}
+		}
+		form{
+			#roksearch_search_str{
+				background: #fff url(gantry-media://find.png) 50% 50% no-repeat;
+				width: 100% / 3;
+				line-height: $core-line-height;
+				font-size: $h2-font-size;
+				color: $black;
+				background-size: 90%;
+				@include breakpoint(mobile-only){width: 100%;}
+				&::-webkit-input-placeholder { color:$color-bg; }
+				&::-webkit-input-placeholder { color:$color-lite; }
+			}
+		}	
+	}
+	#g-main{
+		.g-block{
+			.g-content{
+				margin: 0.1vw;
+				@include display(flex);
+				@include flex-flow(column);
+			}
+			.card{
+				position: relative;
+				a{
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					position: absolute;
+					z-index: 1;
+				}
+			}
+			.block-desc{
+				@include breakpoint(mobile-only){@include order(1);}
+				background-color: $color-zero;
+				color: $white;
+				padding: 2rem;
+				max-height: 23rem;
+				@include transition(linear .5s);
+				&:hover, &:focus{
+					background: $color-lite;
+					@include transition(linear .5s);
+				}
+			}
+			.block-img{
+				@include breakpoint(mobile-only){@include order(2);}
+				width: 100%;
+				height: 20rem;
+				margin: auto;
+				overflow: hidden;
+				@include display(flex);
+				@include align-items(center);
+				@include justify-content(center);
+				.logo-large{
+					max-width: 20rem;
+				}
+			}
+			&.akk{
+				.block-img{
+					background-image: linear-gradient(0deg, $color-bg 5%, $color-zero 100%);
+				}
+			}
+			&.oil{
+				.block-img{
+					background-image: linear-gradient(0deg, $color-bg 5%, $color-tint 100%);
+				}
+			}
+			&.aks{
+				.block-img{
+					background-image: linear-gradient(0deg, $color-bg 5%, $color-tint-l 100%);
+				}
+			}
+		}
+	}
+}

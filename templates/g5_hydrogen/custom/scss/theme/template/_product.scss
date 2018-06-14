@@ -1,0 +1,32 @@
+.level{
+	@extend .levels;
+}
+.extra{
+	@include display(flex);
+	@include justify-content(center);
+	@include align-items(center);
+	@include align-content(center);
+	//@include flex-flow(wrap row);
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	//@include flex(0 50%);
+	@include flex-basis(50%);
+	@include breakpoint(mobile-only){//@include flex(2 0 100%);
+		@include flex-basis(100%);
+	}
+	& > .item-img{
+		//@include flex(0 50%);
+		@include flex-basis(50%);
+		@include breakpoint(mobile-only){
+			//@include flex(0 100%);
+			@include flex-basis(100%);
+		}
+		img{
+			@include breakpoint(desktop-only){width: 90%;}
+		}
+	}
+	& > .item-img:last-child{
+		//@include flex(2 0 50%);
+		@include flex-basis(50%);
+	}
+}

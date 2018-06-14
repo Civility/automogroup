@@ -1,0 +1,4 @@
+enabled: '1'
+content: '<a href="index.php?option=com_content&view=article&id=141" title="Security policy">Политика безопасности</a>'
+css:
+  class: branding

@@ -1,0 +1,19 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+	<div class="g-grid card">
+		<div class="g-block">
+			<div class="g-content">
+				<div class="block-img">
+					{% if particle.image %}
+						<img src="{{ url(particle.image) }}" class="logo-large" alt="{{ particle.headline|e }}" />{% endif %}
+				</div>
+				<div class="block-desc">
+						{% if particle.headline %}<h3 class="page-header item-title">{{ particle.headline|raw }}</h3>{% endif %}
+						{% if particle.description %}<p class="desc">{{ particle.description|raw }}</p>{% endif %}
+					<a href="{{ particle.headlink|e }}"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

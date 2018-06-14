@@ -1,0 +1,59 @@
+name: Logo / Image
+description: Отображение логотипа или изображения.
+type: particle
+icon: fa-file-image-o
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Глобально разрешить частицы логотипа.
+      default: true
+
+    url:
+      type: input.text
+      label: Url
+      description: Url для изображения. Оставьте пустым, чтобы перейти на главную страницу.
+
+    target:
+      type: select.select
+      label: Target
+      description: Окно целевого браузера при нажатии логотипа.
+      placeholder: 'Выбрать...'
+      default: _self
+      options:
+          _self: Same Frame (default)
+          _parent: Parent Frame
+          _blank: New Window or Tab
+
+    image:
+      type: input.imagepicker
+      label: Image
+      description: Выберите желаемый логотип.
+      
+    link:
+      type: input.checkbox
+      label: Link
+      description: Renders Logo / Изображение со ссылкой.
+      default: true
+
+    svg:
+      type: textarea.textarea
+      label: SVG Code
+      description: Ваш SVG-код, который будет добавлен на сайт.
+      placeholder: 'Поместите здесь код <svg>.'
+
+    text:
+      type: input.text
+      label: Text
+      description: Введите текст описания логотипа.
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: Задайте конкретный класс CSS для пользовательского стиля.

@@ -1,0 +1,46 @@
+favicon: 'gantry-media://favicon.ico'
+touchicon: 'gantry-media://logo.png'
+css: {  }
+javascript:
+  -
+    location: 'gantry-assets://js/js.js'
+    inline: ''
+    in_footer: '1'
+    extra: {  }
+    priority: '0'
+    name: js
+  -
+    location: 'gantry-assets://js/slick.min.js'
+    inline: ''
+    in_footer: '1'
+    extra: {  }
+    priority: '0'
+    name: slider
+  -
+    location: 'gantry-assets://js/mixitup.min.js'
+    inline: ''
+    in_footer: '1'
+    extra: {  }
+    priority: '0'
+    name: mixtup
+  -
+    location: 'gantry-assets://js/miup.min.js'
+    inline: ''
+    in_footer: '1'
+    extra: {  }
+    priority: '0'
+    name: miup
+  -
+    location: 'https://api-maps.yandex.ru/2.1/?lang=ru-RU'
+    inline: ''
+    in_footer: '1'
+    extra: {  }
+    priority: '0'
+    name: 'yandex api'
+  -
+    location: 'gantry-assets://js/yandex_map.js'
+    inline: ''
+    in_footer: '1'
+    extra: {  }
+    priority: '0'
+    name: custom_search

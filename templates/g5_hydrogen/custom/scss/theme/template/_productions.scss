@@ -1,0 +1,106 @@
+/*
+.prod_tabs{
+	ul{
+		@include breakpoint(mobile-only){
+			&.nav.tabs .pane:not(.active) a{
+				padding: 1vh 0;
+				opacity: .5;
+			}
+			&.nav .pane.active a{
+				padding: 6vh 0;
+			}
+		}
+		& *:focus { outline-color: transparent;}
+		margin: auto;
+		&.tabs, &.tab-content > .active{
+			@include display(flex);
+			@include flex-flow(wrap row);
+			margin: auto;
+		}
+		.pane{
+			@include display(flex);
+			@include flex(2 0 (100% / 3 - 3) - (1% / 3));
+			text-align: center;
+			@include breakpoint(mobile-only){@include flex(2 0 100%);}
+			&.active{
+				@include flex(2 0 70%);
+				@include transition(ease 1s);
+			}
+			&.active a{
+				.tem-title{text-shadow: 0 0 15px #999;}
+				&:hover, &:focus{
+					background-color: darken($color-zero, 20%);
+				}
+			}
+			a{
+				padding: 6vh 0;
+				margin: .2vw;
+				width: 100%;
+				background-color: $color-zero;
+				&:hover, &:focus{
+					background-color: darken($color-zero, 10%);
+				}
+				.item-title{
+					color: $white;
+					background-color: $transparent;
+					margin: auto;
+					& > * {
+						font-size: $h3-font-size;
+						font-weight: $font-weight-bold;
+						margin: auto;
+					}
+				}
+			}
+		}
+		//подкатегория
+		&.tab-content{
+			.pane{
+				@include display(flex);
+				@include flex(2 0 50%);
+				a {
+					background-color: $color-lite-d;
+					&:hover, &:active{
+						background-color: darken($color-lite-d, 10%);
+						opacity: .7;
+					}
+				}
+			}
+		}
+	}
+}
+*/
+.prod_tabs{
+	@include display(flex);
+	@include flex-flow(row wrap);
+	margin: -0.2rem 0 0 -0.2rem;
+	.tabs{
+		@include flex(1 1 30%);
+		min-width: 20rem;
+	}
+	.pane{
+		background-color: $color-zero;
+		margin: 0.2rem 0 0 0.2rem;
+		a{
+			color: $white;
+			height: 100%;
+			padding: 3rem .5rem;
+			@include display(flex);
+			@include justify-content(center);
+			@include align-items(center);
+			text-align: center;
+			&:hover, &:focus{
+				background-color: $color-zero-d;
+			}
+			> * {margin: 0 1rem;}
+		}
+	}
+	.child-pane{
+		.pane{
+			background-color: $color-lite-d;
+			&:hover, &:active{
+				background-color: darken($color-lite-d, 10%);
+				opacity: .7;
+			}
+		}
+	}
+}

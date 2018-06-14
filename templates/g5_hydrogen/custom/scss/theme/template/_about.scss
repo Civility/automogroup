@@ -1,0 +1,43 @@
+.solid-flex{
+	.flex-header{
+		@include display(flex);
+		@include flex-flow(wrap row);
+		@include breakpoint(large-mobile-range){@include flex-flow(column);}
+		.head-img{
+			@include flex(1 1 30%);
+			border-top: 1px solid $color-tint;
+			@include display(flex);
+			@include justify-content(center);
+			@include align-items(center);
+			padding: 2vh;
+			img{
+				max-height: 8vh;
+			}
+		}
+		.head-title{
+			@extend .head-img;
+			@include flex(1 1 70%);
+			margin: 0;
+			background-color: $color-zero;
+		}
+	}
+	.brands{
+		@include display(flex);
+		@include justify-content(center);
+		@include flex-flow(wrap row);
+		.brand{
+			@include flex(1 1 50%);
+			text-align: center;
+			@include breakpoint(mobile-only){@include flex(100%);;}
+			.item-image{
+				margin: 4vh;
+				a{
+					filter: grayscale(1);
+					&:hover, &:focus{
+						filter: grayscale(0);
+					}	
+				}
+			}
+		}
+	}
+}

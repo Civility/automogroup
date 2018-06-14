@@ -1,0 +1,108 @@
+.levels{
+	@include display(flex);
+	@include flex-direction(column);
+	.full-title{
+		//@include flex-basis(100%);
+		font-size: $h3-font-size;
+	}
+	.used{
+		//@include flex-basis(100%);
+		@include display(flex);
+		@include align-items(center);
+		//@include flex-flow(wrap row);
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
+		padding: 2vh;
+		& > .item-img{
+			@include flex-basis(50%);
+			text-align: center;
+			@include breakpoint(mobile-only){
+				//@include flex(2 0 100%);
+				@include flex-grow(2);
+				@include flex-basis(100%);
+
+
+			}
+			img{
+				@include breakpoint(desktop-only){width: 90%;}
+			}
+		}
+		.content{
+			//@include flex(0 50%);
+			@include flex-basis(50%);
+			@include align-self(flex-start);
+			@include breakpoint(mobile-only){
+			//@include flex(2 0 100%);
+			@include flex-grow(2);
+			@include flex-basis(100%);
+			}
+		}
+	}
+	.tables{
+		//@include flex(0 100%);
+		//@include flex-basis(100%);
+	}
+}
+table{
+	//для всей таблицы
+	tr{
+		& > td {
+			text-align: center;
+			border-left: 1px solid  $white;
+			border-right: 1px solid  $white;
+			@include breakpoint(no-desktop){
+				display: block;
+				text-align: right;
+				border-left: none;
+				border-right: none;
+				border-bottom: 1px solid $white;
+				padding: 1vw 2vw;
+				&:last-child{
+					border-bottom: none;
+				}
+				&:before{
+					content: attr(data-label);
+					float: left;
+					text-transform: uppercase;
+					font-weight: $font-weight-bold;
+				}
+			}
+			a {
+				color: $white;
+			}
+		}
+	}
+	//для thead, tbody
+	thead{
+		//text-transform: uppercase;
+		background-color: $color-lite-d;
+		border: 1px solid  $white;
+		text-transform: capitalize;
+		@include breakpoint(no-desktop){display: none;}
+	}
+	tbody{
+		border: 1px solid  $white;
+		background-color: $color-zero;
+		&:hover, &:focus {
+			background-color: darken( $color-zero, 5% );
+		}
+		@include breakpoint(no-desktop){
+			display: table;
+			width: 100%;
+			margin-bottom: 2vh;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		//чередование 
+		&:nth-child(odd) {
+			background-color: $color-lite;
+		&:hover, &:focus {
+			background-color: lighten( $color-lite, 5% );
+		}
+		}
+		& > td {
+			border: 1px solid $white;
+			}		
+		}
+	}

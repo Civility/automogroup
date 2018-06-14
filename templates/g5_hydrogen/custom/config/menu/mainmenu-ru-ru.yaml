@@ -1,0 +1,38 @@
+ordering:
+  home-ru: ''
+  about: ''
+  products:
+    akk-avto: ''
+    akk-moto: ''
+    covers: ''
+    charging: ''
+  materials: ''
+  contacts:
+    where-buy: ''
+items:
+  home-ru:
+    id: 105
+  about:
+    id: 118
+  products:
+    id: 104
+    dropdown_dir: right
+    dropdown_hide: '1'
+    width: auto
+  products/akk-avto:
+    id: 113
+  products/akk-moto:
+    id: 114
+  products/covers:
+    id: 115
+  products/charging:
+    id: 116
+  materials:
+    id: 117
+  contacts:
+    id: 119
+    dropdown_dir: right
+    dropdown_hide: '1'
+    width: auto
+  contacts/where-buy:
+    id: 121

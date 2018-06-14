@@ -1,0 +1,150 @@
+a{
+	@include transition(linear .5s);
+}
+pre {
+	color: #000;
+}
+*:focus, *:active{
+	outline: none; 
+}
+*:not(.default).full-title {
+	margin: inherit;
+	background-color: $color-zero;
+	padding: 2vh;
+	text-align: center;
+}
+@for $i from 1 through 6{
+	@each $num in #{$i}{
+		h#{$num} {
+			margin: auto;
+		}
+	}
+}
+#g-showcase{
+	@for $i from 0 through 200 {
+		@each $id in #{$i}{
+		.show_#{$id}, .show_0 {
+			overflow: hidden;
+			@include display(flex);
+			@include justify-content(center);
+			@include align-items(center);
+			position: relative;
+			height: 70vh;
+			width: 100%;
+			box-sizing: border-box;
+			background-image: url('gantry-media://banner/#{$id}.jpg');
+			background-position: 50% 50%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			}
+		}	
+	}
+	.slick-slide{
+		img{
+			width: 100vw;
+		}
+	}
+	[class^="show_"]{
+		& > * {
+				text-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
+				font-size: 4.5vw;
+				z-index: 2;
+				text-align: center;
+				padding-top: 15vh;
+				margin: 0;
+				@include breakpoint(mobile-only){
+					//font-size: 100%;
+					font-size: 10vw;
+				}
+			}
+		&:before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: radial-gradient(50% 50%, $transparent, #0c2032);
+			//background-image: -webkit-radial-gradient( 50% 50%, circle closest-side, rgba(0,0,0,0) 50%, rgba(12,32,50,0.97) 150%);
+			z-index: 2;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: repeating-linear-gradient(45deg, $black, $transparent 5px, $black 5px, $black 5px);
+			z-index: 1;
+			pointer-events: none;
+			opacity: .1;
+		}
+	}
+}
+
+//tags
+.item-tag {
+	@each $id in hugel, leoch, oleoblitz, autosock, uplus{
+		.#{$id} {
+		background-image: url('gantry-media:/logo/#{$id}.svg');
+		background-position: 50% 50%;
+		background-size: auto;
+		background-repeat: no-repeat;
+		width: 50%;
+		height: 100%;
+		}
+		&.tag .#{$id}{
+			background-size: contain;
+			padding: $core-font-size + 1;
+		}
+	}
+}
+	//find боковые кнопки
+#g-feature{
+    position: absolute;
+	.find_buy{
+		@include breakpoint(mobile-only){display: none;}
+		position: fixed;
+		right: 0;
+		top: 50%;
+		padding: 0;
+		width: $core-font-size + 5rem;
+		z-index: 5;
+		& > div {
+			background-color: $white;
+			margin: 1vh 0;
+			height: $core-font-size + 5rem;
+			text-align: center;
+			text-rendering: optimizespeed;
+			text-transform: uppercase;
+		}
+		a{
+			@include display(flex);
+			@include align-items(center);
+			@include flex-flow(column);
+			@include justify-content(space-around);
+			padding: 2vh 3vh 2vh 2vh;
+			height: 100%;
+			width: 100%;
+			&:hover, &:focus{
+				background-color: $color-zero-d;
+			}
+		}
+		i{
+			font-size: $h3-font-size;
+			margin:0;
+		}
+		p{
+			font-size: $h6-font-size;
+			margin: 0;
+			padding: 1vh;
+		}
+	}
+}
+#roksearch_results span.small{
+	position: inherit;
+	bottom: 0;
+	right: 0;
+	text-align: left;
+}

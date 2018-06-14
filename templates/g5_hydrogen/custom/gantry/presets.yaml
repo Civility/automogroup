@@ -1,0 +1,39 @@
+preset1:
+  image: 'gantry-admin://images/main.jpg'
+  description: Automotogroup
+  colors:
+    - '#165599'
+    - '#0c2032'
+    - '#ffffff'
+    - '#0f263c'
+    - '#103C6E'
+
+  styles:
+    base:
+      background: '#0c1f31'
+      text-color: '#ffffff'
+    accent:
+      color-1: '#165599'
+      color-2: '#0f263c'
+    header:
+      background: 'rgba(12, 32, 50, 0.5)'
+      text-color: '#ffffff'
+    navigation:
+      background: 'rgba(0, 0, 0, 0)'
+      text-color: '#ffffff'
+      overlay: 'rgba(0, 0, 0, 0.0)'
+    showcase:
+      background: 'rgba(0, 0, 0, 0)'
+      text-color: '#ffffff'
+    feature:
+      background: 'rgba(0, 0, 0, 0)'
+      text-color: '#ffffff'
+    main:
+      background: '#0c2032'
+      text-color: '#ffffff'
+    footer:
+      background: '#0c2032'
+      text-color: '#e0e0e0'
+    offcanvas:
+      background: '#0c2032'
+      text-color: '#e0e0e0'

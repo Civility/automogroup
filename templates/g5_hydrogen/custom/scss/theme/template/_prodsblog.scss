@@ -1,0 +1,52 @@
+.other:not(.solid-flex){
+	.flex-header{
+		@include display(flex);
+		@include justify-content(center);
+		@include align-items(center);
+		@include align-content(center);
+		padding: 3rem 0.5rem;
+		margin-bottom: .2rem;
+		width: 100%;
+		background-color: $color-zero;
+		text-align: center;
+		.head-title{
+			margin: auto;
+			font-weight: $font-weight-bold;
+		}
+	}
+	.such{
+		@include display(flex);
+		@include justify-content(space-between);
+		@include flex-flow(row wrap);
+		width: 100%;
+		text-align: center;
+		& > div{
+			flex:0 0 50%;
+			margin: -.2rem 0 0 -.2rem;
+			@include breakpoint(mobile-only){flex:2 0 100%; margin-bottom: 0.2rem;}
+			&  > .item-title{
+				margin: .2rem 0 0 .2rem;
+				a{
+					color: $white;
+					background-color: $color-lite-d;
+					padding: 3rem 0.5rem;
+					@include display(flex);
+					@include justify-content(center);
+					@include align-content(center);
+					&:hover, &:active{
+						background-color: darken($color-lite-d, 10%);
+						opacity: .7;
+					}		
+				}
+			}
+/* 			&:first-child .item-title{
+	margin-left: 0;
+	@include breakpoint(mobile-only){}
+}
+&:last-child .item-title{
+	margin-right: 0;
+	@include breakpoint(mobile-only){}
+} */
+		}
+	}
+}

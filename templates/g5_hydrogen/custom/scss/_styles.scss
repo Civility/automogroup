@@ -1,0 +1,105 @@
+@import "dependencies";
+@import "theme/style";
+@import "slick/main";
+@import "miup/main";
+//filter
+// grayscale      ex: filter: grayscale(100%); //полутон
+// sepia          ex: filter: sepia(100%); //сепия
+// saturate       ex: filter: saturate(0%);  //насыщать
+// hue-rotate     ex: filter: hue-rotate(45deg); // вращение
+// invert         ex: filter: invert(100%); //инверсия
+// brightness     ex: filter: brightness(15%); //яркость
+// contrast       ex: filter: contrast(200%); //контрастность
+// blur           ex: filter: blur(2px); // размытие
+@mixin filter($filter-type,$filter-amount) { 
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+//@include filter(grayscale, 100%);
+//@include filter: grayscale(100%) blur(5px)
+/*
+ @extend %border;
+*/
+/*
+//min 75rem
+@include breakpoint(large-desktop-range){}
+//range 60rem to 74.938rem
+@include breakpoint(desktop-range){}
+//48rem to 59.938rem
+@include breakpoint(tablet-range){}
+//30rem to 47.938rem
+@include breakpoint(large-mobile-range){}
+//max 30rem
+@include breakpoint(small-mobile-range){}
+
+//min 60rem
+@include breakpoint(desktop-only){}
+
+//min 48rem
+@include breakpoint(no-mobile){}
+//max 47.938 rem
+@include breakpoint(mobile-only){}
+//max 59.938rem
+@include breakpoint(no-desktop){}
+*/
+/*
+@include display(flex);
+@include justify-content(center);
+@include align-items(center);
+@include align-content(center);
+@include flex-flow(row wrap);
+@include flex-grow(2);
+@include flex-basis(100%);
+@include flex(2 0 100%);
+
+*/
+/*
+	@include transition(ease-in .5s);
+$content-margin;
+$content-padding;
+@include transition(opacity 0.2s);
+@include ellipsis();
+	@include transform(rotate(0deg));
+	@include transform(translateY(-40px));
+	@include transform(translate(-50%, -50%));
+	@include transform(translateZ(0);
+	@include transform(scale(1.2, 1.2));
+	@include transform(translate3d(0, 0, 0));
+*/
+/*
+@include transform(translateZ(0));
+@include transition(transform 0.2s ease-out);
+@include transform(scale(0));
+@include transform(translate(-50%, -50%));
+*/
+/*
+// Font Family
+$base-body-font:				"roboto", "Helvetica", "Tahoma", "Geneva", "Arial", "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !default;
+$base-heading-font:				"roboto", "Helvetica", "Tahoma", "Geneva", "Arial", "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !default;
+$font-family-mono: 				"Menlo", "Monaco", monospace;
+$font-family-serif:				"Georgia", "Times", "Times New Roman", serif;
+
+// Font Weights
+$font-weight-regular:			400;
+$font-weight-medium:			500;
+$font-weight-bold:				700;
+
+// Base Sizes
+$core-font-size:				1rem !default;
+$responsive-font-size:			1vw !default;
+$core-line-height:				1.5 !default;
+
+// Heading Sizes
+$h1-font-size:					$core-font-size + 1.25 !default;
+$h2-font-size:					$core-font-size + 0.90 !default;
+$h3-font-size:					$core-font-size + 0.50 !default;
+$h4-font-size:					$core-font-size + 0.15 !default;
+$h5-font-size:					$core-font-size !default;
+$h6-font-size:					$core-font-size - 0.15 !default;
+
+$content-margin:				0.625rem !default;
+$content-padding:				0.938rem !default;
+*/

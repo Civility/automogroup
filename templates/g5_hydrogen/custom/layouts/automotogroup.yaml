@@ -1,0 +1,25 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/home.png'
+  name: automotogroup
+
+layout:
+  /header/:
+    - [logo , menu, position-lang]
+
+  /showcase/:
+    - position-show
+
+  /feature/:
+    - position-feature
+    - position-search
+    - position-local
+
+  /main/:
+    - system-content
+    - [position-akk, position-oil, position-aks]
+
+  /footer/:
+    - [copyright, branding]
+  offcanvas:
+    - mobile-menu
